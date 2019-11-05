@@ -1,0 +1,36 @@
+.fieldSquare {
+  border: 1px solid lightgrey;
+  width: 30px;
+  height: 30px;
+}
+
+.fieldRow {
+  display: flex;
+}
+
+/* Setting the border right and left */
+.fieldSquare:first-child {
+  border-left: 2px solid black;
+}
+.fieldSquare:last-child {
+  border-right: 2px solid black;
+}
+/* Setting the border for top and bottom */
+.fieldRow:last-child {
+  border-bottom: 2px solid black;
+}
+.fieldRow:first-child {
+  border-top: 2px solid black;
+}
+
+.mainView {
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  background-color: blue;
+  border-radius: 50%;
+  transform: scale(0.9);
+  height: 100%;
+}
