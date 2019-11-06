@@ -12,6 +12,8 @@ interface State {
   playfieldDimensions: any;
 }
 
+// This class keeps track of the keyboard input and holds map of the blocks
+// It also controls if a row should be deleted if full and creates new blocks
 export class GameObserver extends React.Component<Props, State> {
 
   constructor(props) {

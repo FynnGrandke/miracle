@@ -8,6 +8,7 @@ interface Props {
   rowBlockLayout: number[];
 }
 
+// One row in the game field
 export const FieldRow = function FieldRow(props: Props) {
   const fieldSquares = [];
 

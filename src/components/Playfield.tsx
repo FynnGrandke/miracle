@@ -16,6 +16,7 @@ interface Props {
   activeRow: number;
 }
 
+// The playfield which defines the layout
 export const Playfield = function Playfield(props: Props) {
 
   const fieldRows = [];

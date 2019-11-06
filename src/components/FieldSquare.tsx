@@ -4,6 +4,7 @@ interface Props {
   blockExists: boolean;
 }
 
+// One square in a row
 export const FieldSquare = function FieldSquare(props: Props) {
   return (
     <div className="fieldSquare">

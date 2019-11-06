@@ -9,6 +9,7 @@ interface Props {
   getRowLayout: any;
 }
 
+// TODO: Unneccessary?
 export const MainView = function MainView(props: Props) {
 
   return (

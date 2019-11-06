@@ -1,5 +1,5 @@
 
-
+// TODO: Unneccessary?
 export class PlayfieldTracker {
 
   // Defining the playfield and it's blocks as plane (in dimensions)
