@@ -34,8 +34,10 @@ export const Playfield = function Playfield(props: Props) {
   }
 
   return (
-    <div className="playfield">
-      {fieldRows}
+    <div className="mainView">
+      <div className="playfield">
+        {fieldRows}
+      </div>
     </div>
   );
 };

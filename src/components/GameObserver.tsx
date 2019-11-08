@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainView } from './MainView';
+import { Playfield } from './Playfield';
 
 interface Props { }
 
@@ -165,7 +165,7 @@ export class GameObserver extends React.Component<Props, State> {
   }
 
   render() {
-    return <MainView
+    return <Playfield
       activeRow={this.state.activeRow}
       numberOfRows={this.state.numberOfRows}
       numberOfColumns={this.state.numberOfColumns}
