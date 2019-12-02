@@ -9,6 +9,7 @@ interface State {
   numberOfRows: number;
   numberOfColumns: number;
   playfieldDimensions: any;
+  points: number;
 }
 
 // This class keeps track of the keyboard input and holds map of the blocks
@@ -32,7 +33,8 @@ export class GameObserver extends React.Component<{}, State> {
       numberOfRows,
       numberOfColumns,
       activeRow: 0,
-      playfieldDimensions: newPlayfieldDimensions
+      playfieldDimensions: newPlayfieldDimensions,
+      points: 0
     };
 
     this.getRowBlocks = this.getRowBlocks.bind(this);
@@ -78,6 +80,7 @@ export class GameObserver extends React.Component<{}, State> {
         // Casting the row to an array to make it easier to check if it is full
         if (this.getRowBlocks(this.state.activeRow).toString() === new Array(this.state.numberOfColumns).fill(1).toString()) {
           this.emptyRow(this.state.activeRow);
+          this.setState({ points: this.state.points + 1 });
         }
 
         this.newBlock();
@@ -164,12 +167,19 @@ export class GameObserver extends React.Component<{}, State> {
   }
 
   render() {
-    return <Playfield
-      activeRow={this.state.activeRow}
-      numberOfRows={this.state.numberOfRows}
-      numberOfColumns={this.state.numberOfColumns}
-      coordinatesXY={this.getCoordinates()}
-      getRowLayout={this.getRowBlocks}
-    />;
+    return (
+      <div>
+        <div>
+          Points: {this.state.points}
+        </div>
+        <Playfield
+          activeRow={this.state.activeRow}
+          numberOfRows={this.state.numberOfRows}
+          numberOfColumns={this.state.numberOfColumns}
+          coordinatesXY={this.getCoordinates()}
+          getRowLayout={this.getRowBlocks}
+        />
+      </div>
+    );
   }
 }
