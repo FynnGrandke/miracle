@@ -1,7 +1,6 @@
 import React from 'react';
 import { Playfield } from './Playfield';
 
-interface Props { }
 
 interface State {
   activeRow: number;
@@ -14,7 +13,7 @@ interface State {
 
 // This class keeps track of the keyboard input and holds map of the blocks
 // It also controls if a row should be deleted if full and creates new blocks
-export class GameObserver extends React.Component<Props, State> {
+export class GameObserver extends React.Component<{}, State> {
 
   constructor(props) {
     super(props);
