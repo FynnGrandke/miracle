@@ -169,9 +169,6 @@ export class GameObserver extends React.Component<{}, State> {
   render() {
     return (
       <div>
-        <div>
-          Points: {this.state.points}
-        </div>
         <Playfield
           activeRow={this.state.activeRow}
           numberOfRows={this.state.numberOfRows}
@@ -179,6 +176,9 @@ export class GameObserver extends React.Component<{}, State> {
           coordinatesXY={this.getCoordinates()}
           getRowLayout={this.getRowBlocks}
         />
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          Points: {this.state.points}
+        </div>
       </div>
     );
   }
